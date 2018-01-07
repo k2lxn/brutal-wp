@@ -1,1 +1,0 @@
-<p>Totally custom front page content</p>
