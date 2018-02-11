@@ -709,8 +709,6 @@ a:hover, a:active {
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -723,7 +721,6 @@ a:hover, a:active {
 .clear:after,
 .entry-content:after,
 .comment-content:after,
-.site-header:after,
 .site-content:after,
 .site-footer:after {
 	clear: both;
@@ -743,6 +740,59 @@ a:hover, a:active {
 	.site-content {
 		padding: 2em;
 	}
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.site-header {
+	position: relative;
+	padding: 1em;
+	font-family: "Work Sans", Helvetica, "Lucida Grande", sans-serif;
+	background-color: #ccc;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+@media screen and (min-width: 600px) {
+	.site-header {
+		padding: 1em 2em;
+	}
+}
+
+.site-navigation {
+	width: 40%;
+}
+
+.site-branding {
+	min-height: 65px;
+	width: 50%;
+}
+
+.site-title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: 1em;
+}
+
+.site-title a {
+	color: #000;
+	text-decoration: none;
+}
+
+.site-title a:hover, .site-title a:focus {
+	text-decoration: underline;
+}
+
+.site-description {
+	margin: 0;
+	font-size: 0.75em;
 }
 
 /*--------------------------------------------------------------
