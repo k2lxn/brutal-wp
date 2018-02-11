@@ -4,19 +4,32 @@
 	font-family: $font__sans;
 	background-color: $color__background-header;
 	display: flex;
-	justify-content: space-between;
+	//justify-content: space-between;
 
 	@media screen and ( min-width: $query__small ) {
 		padding: 1em 2em;
 	}
 }
+
 .site-navigation {
-	width: 40%;
+	
 }
 
 .site-branding {
 	min-height: 65px; // logo height
 	width: 50%;
+	flex: 1 0 auto;
+	display: flex;
+}
+
+.custom-logo-link {
+	margin-right: 1em;
+
+	img {
+		display: block;
+		height: 65px;
+		width: auto;
+	}
 }
 
 .site-title {

@@ -543,10 +543,12 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
+	/*
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
+	*/
 }
 
 .main-navigation ul {
@@ -703,6 +705,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
+/*
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -713,9 +716,7 @@ a:hover, a:active {
 .site-content:after,
 .site-footer:before,
 .site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
+	@include clearfix;
 }
 
 .clear:after,
@@ -723,9 +724,9 @@ a:hover, a:active {
 .comment-content:after,
 .site-content:after,
 .site-footer:after {
-	clear: both;
+	@include clearfix-after;
 }
-
+*/
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -753,9 +754,6 @@ a:hover, a:active {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
 }
 
 @media screen and (min-width: 600px) {
@@ -764,13 +762,25 @@ a:hover, a:active {
 	}
 }
 
-.site-navigation {
-	width: 40%;
-}
-
 .site-branding {
 	min-height: 65px;
 	width: 50%;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.custom-logo-link {
+	margin-right: 1em;
+}
+
+.custom-logo-link img {
+	display: block;
+	height: 65px;
+	width: auto;
 }
 
 .site-title {
