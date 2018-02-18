@@ -13,23 +13,38 @@
 
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-			.append( brutalScreenReaderText.icon )
+			//.append( brutalScreenReaderText.icon )
+			.append( $( '<span />', { 'class': 'dropdown-symbol', text: '+' }) )
 			.append( $( '<span />', { 'class': 'screen-reader-text', text: brutalScreenReaderText.expand }) );
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
+		container.find( '.menu-toggle' ).append( $( '<span />', { 'class': 'dropdown-symbol', text: '+' }) );
 		// Set the active submenu dropdown toggle button initial state.
+		/*
 		container.find( '.current-menu-ancestor > button' )
 			.addClass( 'toggled-on' )
 			.attr( 'aria-expanded', 'true' )
 			.find( '.screen-reader-text' )
 			.text( brutalScreenReaderText.collapse );
+		*/
+		var activeSubmenu = container.find( '.current-menu-ancestor > button' );
+		activeSubmenu
+			.addClass( 'toggled-on' )
+			.attr( 'aria-expanded', 'true' )
+			.find( '.screen-reader-text' )
+			.text( brutalScreenReaderText.collapse );
+
+		activeSubmenu.find( '.dropdown-symbol' ).text( '-' );
+
 		// Set the active submenu initial state.
 		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
 
-		container.find( '.dropdown-toggle' ).click( function( e ) {
+		container.find( '.menu-toggle, .dropdown-toggle' ).click( function( e ) {
 			var _this = $( this ),
 				screenReaderSpan = _this.find( '.screen-reader-text' );
+				dropdownSymbol = _this.find( '.dropdown-symbol' );
+				dropdownSymbol.text( dropdownSymbol.text() === '-' ? '+' : '-');
 
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
@@ -107,5 +122,33 @@
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
 	})();
+
+	// Add the default ARIA attributes for the menu toggle and the navigations.
+	function onResizeARIA() {
+		if ( 'block' === $( '.menu-toggle' ).css( 'display' ) ) {
+
+			if ( menuToggle.hasClass( 'toggled-on' ) ) {
+				menuToggle.attr( 'aria-expanded', 'true' );
+			} else {
+				menuToggle.attr( 'aria-expanded', 'false' );
+			}
+
+			if ( siteNavigation.closest( '.main-navigation' ).hasClass( 'toggled-on' ) ) {
+				siteNavigation.attr( 'aria-expanded', 'true' );
+			} else {
+				siteNavigation.attr( 'aria-expanded', 'false' );
+			}
+		} else {
+			menuToggle.removeAttr( 'aria-expanded' );
+			siteNavigation.removeAttr( 'aria-expanded' );
+			menuToggle.removeAttr( 'aria-controls' );
+		}
+	}
+
+	$( document ).ready( function() {
+		$( window ).on( 'load.brutal', onResizeARIA );
+		$( window ).on( 'resize.brutal', onResizeARIA );
+	});
+	
 })( jQuery );
 

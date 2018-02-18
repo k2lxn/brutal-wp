@@ -632,7 +632,8 @@ a:hover, a:active {
 * * * * * * * * * * * * * * * * * */
 .main-navigation {
 	text-align: right;
-	border: 2px solid green;
+	font-family: "Work Sans", Helvetica, "Lucida Grande", sans-serif;
+	font-size: .9em;
 }
 
 .main-navigation ul {
@@ -656,6 +657,39 @@ a:hover, a:active {
 	display: none;
 }
 
+.main-navigation a {
+	text-decoration: none;
+	color: #000;
+}
+
+.main-navigation a:hover, .main-navigation a:focus {
+	text-decoration: underline;
+}
+
+button.dropdown-toggle {
+	border: none;
+	background: inherit;
+	padding: 0;
+}
+
+.dropdown-symbol {
+	color: #000;
+	font-size: 1em;
+	line-height: 1.5em;
+	padding: .4em .5em;
+}
+
+.menu-toggle {
+	font-family: "Work Sans", Helvetica, "Lucida Grande", sans-serif;
+	text-transform: uppercase;
+	border: none;
+	background: none;
+}
+
+.menu-toggle:focus {
+	border: none;
+}
+
 @media screen and (min-width: 600px) {
 	.menu-toggle {
 		display: none;
@@ -670,9 +704,6 @@ a:hover, a:active {
 		        justify-content: flex-end;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
-	}
-	.main-navigation ul li a {
-		padding: .4em 1em;
 	}
 }
 
@@ -846,7 +877,7 @@ a:hover, a:active {
 
 .site-branding {
 	min-height: 65px;
-	width: 50%;
+	width: 40%;
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 0 auto;
 	        flex: 1 0 auto;
