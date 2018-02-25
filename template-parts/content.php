@@ -20,7 +20,8 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php brutal_posted_on(); ?> 
+			<?php brutal_posted_on(); ?>
+			<?php brutal_byline(); ?> 
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
