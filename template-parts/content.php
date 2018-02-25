@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php brutal_posted_on(); ?>
+			<?php brutal_posted_on(); ?> 
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -51,6 +51,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php brutal_entry_footer(); ?>
+		<?php //brutal_default_entry_footer(); ?>
+		<?php brutal_tag_list(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
