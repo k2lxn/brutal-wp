@@ -138,9 +138,6 @@ add_action( 'widgets_init', 'brutal_widgets_init' );
  * Enqueue scripts and styles.
  */
 function brutal_scripts() {
-	// Enqueue Google Fonts: Work Sans and Crimson Text
-	wp_enqueue_style( 'brutal-fonts', 'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Work+Sans:400,700');
-	
 	wp_enqueue_style( 'brutal-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'brutal-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
