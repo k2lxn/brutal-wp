@@ -965,8 +965,18 @@ button.dropdown-toggle {
 	margin: 0 0 1.5em;
 }
 
-.entry-header h1 {
+.entry-title {
 	margin: 0;
+	font-size: 2.6em;
+}
+
+.entry-title a {
+	color: #000;
+	text-decoration: none;
+}
+
+.entry-title a:hover, .entry-title a:focus {
+	text-decoration: underline;
 }
 
 .entry-meta {
