@@ -59,7 +59,7 @@ if ( ! function_exists( 'brutal_posted_on' ) ) :
 		
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'brutal' ), $time_string
+			esc_html_x( '%s', 'post date', 'brutal' ), $time_string
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
@@ -194,3 +194,21 @@ function brutal_post_thumbnail() {
 	<?php endif; // End is_singular().
 }
 endif;
+
+
+if ( ! function_exists( 'brutal_format_comment' ) ) :
+/**
+ * Custom post comment output -- use as a callback to wp_list_comments() 
+ */
+function brutal_format_comment( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment; 
+
+	$comment_class = 'class="' . join( ' ', get_comment_class() ) . '"';
+
+	$comment_meta = '<span></span>' ;
+
+	echo '<li ' . $comment_class . ' id="li-comment-' . get_comment_ID() . '">Hi Jane</li>' ;
+
+}
+endif;
+

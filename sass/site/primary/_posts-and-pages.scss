@@ -6,6 +6,18 @@
 	margin: 0 0 1.5em;
 }
 
+.entry-header {
+	h1 {
+		margin: 0;
+	}
+}
+
+.entry-meta {
+	font-family: $font__sans;
+	text-transform: uppercase;
+	@include font-size(.75);
+}
+
 .updated:not(.published) {
 	display: none;
 }
@@ -19,4 +31,16 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.tags-links {
+	a {
+		font-family: $font__sans;
+		text-transform: lowercase;
+		color: #fff;
+		background-color: $color__grey-darker;
+		padding: 3px 15px;
+		border-radius: 20px 0 0 20px;
+		text-decoration: none;
+	}
 }

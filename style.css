@@ -965,6 +965,17 @@ button.dropdown-toggle {
 	margin: 0 0 1.5em;
 }
 
+.entry-header h1 {
+	margin: 0;
+}
+
+.entry-meta {
+	font-family: Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
 .updated:not(.published) {
 	display: none;
 }
@@ -980,15 +991,77 @@ button.dropdown-toggle {
 	margin: 0 0 1.5em;
 }
 
+.tags-links a {
+	font-family: Helvetica, sans-serif;
+	text-transform: lowercase;
+	color: #fff;
+	background-color: #404040;
+	padding: 3px 15px;
+	border-radius: 20px 0 0 20px;
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-.comment-content a {
-	word-wrap: break-word;
+.comments-area {
+	padding-top: 15px;
+	border-top: 3px solid #000;
 }
 
-.bypostauthor {
-	display: block;
+.comments-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.comment-list {
+	margin: 0;
+	padding-left: 1em;
+	list-style: none;
+	font-family: Helvetica, sans-serif;
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+.comment-list li.comment {
+	background-color: #eee;
+	padding: 1em;
+	margin-bottom: 15px;
+}
+
+.comment-list .comment-meta .comment-author {
+	color: #000;
+}
+
+.comment-list .comment-meta .comment-author a {
+	color: #000;
+	text-decoration: none;
+}
+
+.comment-list .comment-meta .comment-author a:hover {
+	text-decoration: underline;
+}
+
+.comment-list .comment-meta .comment-metadata, .comment-list .comment-meta .comment-metadata > a {
+	font-size: 14px;
+	font-size: 0.875rem;
+	color: #404040;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.comment-list ul {
+	margin: 15px 0 -1em;
+	padding-left: 1em;
+	list-style: none;
+}
+
+.comment-list ul li.comment {
+	background-color: #ccc;
+}
+
+.comment-content a {
+	word-wrap: break-word;
 }
 
 /*--------------------------------------------------------------

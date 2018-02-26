@@ -45,18 +45,21 @@ if ( post_password_required() ) {
 			?>
 		</h2><!-- .comments-title -->
 
-		<?php the_comments_navigation(); ?>
+		<?php //the_comments_navigation(); ?>
 
-		<ol class="comment-list">
+		<ul class="comment-list">
 			<?php
+				
 				wp_list_comments( array(
-					'style'      => 'ol',
+					'style'      => 'ul',
 					'short_ping' => true,
 				) );
+				
+				//wp_list_comments('type=comment&callback=brutal_format_comment'); 
 			?>
-		</ol><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 
-		<?php the_comments_navigation();
+		<?php //the_comments_navigation();
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) : ?>
