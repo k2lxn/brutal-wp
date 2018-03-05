@@ -47,8 +47,7 @@
 				),
 				get_the_title()
 			) );
-		*/		
-
+		*/			
 			
 			$continue_reading_text = sprintf( wp_kses(
 					 //translators: %s: Name of current post. Only visible to screen readers 
