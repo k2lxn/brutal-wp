@@ -520,15 +520,16 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	text-decoration: none;
+	color: #000;
 }
 
 a:visited {
-	color: purple;
+	color: #7b7b7b;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: red;
 }
 
 a:focus {
@@ -537,6 +538,25 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
+}
+
+.page-content a:after,
+.entry-content a:after,
+.entry-summary a:after,
+.comment-content a:after {
+	content: '\2192';
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+	font-size: 80%;
+}
+
+.page-content a:focus, .page-content a:hover,
+.entry-content a:focus,
+.entry-content a:hover,
+.entry-summary a:focus,
+.entry-summary a:hover,
+.comment-content a:focus,
+.comment-content a:hover {
+	color: red;
 }
 
 /*--------------------------------------------------------------

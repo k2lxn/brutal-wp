@@ -1,5 +1,6 @@
 a {
-	color: $color__link;
+	text-decoration: none;
+	color: $color__text-main;
 
 	&:visited {
 		color: $color__link-visited;
@@ -15,5 +16,24 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
+	}
+}
+
+.page-content,
+.entry-content,
+.entry-summary,
+.comment-content {
+	
+	a {
+		&:after {
+			content: '\2192';
+			font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+			font-size: 80%;
+		}
+			
+		&:focus,
+		&:hover {
+			color: $color__interactive;
+		}
 	}
 }

@@ -1,6 +1,6 @@
 $color__grey-light: #eee ;
 $color__grey: #ccc;
-$color__grey-dark: #9e9e9e;
+$color__grey-dark: #7b7b7b;
 $color__grey-darker: #404040;
 
 $color__background-body: #fff;
@@ -15,9 +15,11 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+
+$color__interactive: red;
+//$color__link: royalblue;
+$color__link-visited: $color__grey-dark;
+$color__link-hover: $color__interactive;
 $color__text-main: #000;
 
 $color__border-button: #ccc #ccc #bbb;
