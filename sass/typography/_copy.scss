@@ -8,6 +8,20 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0 1.5em;
+	font-size: 85%;
+
+	&:before {
+		content: '\201C';
+		font-size: 3em;
+		position: absolute;
+		left: .3em;
+		line-height: .5em;
+
+		@media screen and ( min-width: $query__small ) {
+			left: .75em;
+		}
+	}
+
 }
 
 address {
@@ -27,7 +41,6 @@ pre {
 
 code, kbd, tt, var {
 	font-family: $font__code;
-	@include font-size(0.9375);
 }
 
 abbr, acronym {
