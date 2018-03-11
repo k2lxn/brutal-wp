@@ -1174,6 +1174,12 @@ object {
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
+	font-family: Helvetica, sans-serif;
+	font-size: 75%;
+}
+
+.wp-caption a {
+	color: inherit;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -1182,12 +1188,22 @@ object {
 	margin-right: auto;
 }
 
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+.wp-caption.aligncenter > .wp-caption-text {
+	margin-left: 0;
+}
+
+@media screen and (min-width: 600px) {
+	.wp-caption.aligncenter > .wp-caption-text {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .wp-caption-text {
 	text-align: center;
+	color: #404040;
+	background-color: #eee;
+	padding: 5px 0;
 }
 
 /*--------------------------------------------------------------
