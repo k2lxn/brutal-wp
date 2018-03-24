@@ -12,7 +12,7 @@
  * @package brutal
  */
 
-get_header(); ?>
+get_header( 'front' ); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -28,5 +28,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+get_footer( 'front' );
 
